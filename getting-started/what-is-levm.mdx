@@ -1,0 +1,36 @@
+---
+title: "What is LevM?"
+description: "The platform, the safety design, and what makes it different."
+---
+
+LevM is a leveraged trading platform built on top of prediction markets.
+
+Traditional prediction markets like Polymarket let you buy YES or NO shares at prices between 0 and 100 cents. The amount you can make is limited by how much capital you put in. If you spend $100 on a contract at 60 cents and it resolves YES, you get back $167. That's a 67% return on full capital risked.
+
+LevM gives you leverage. Deposit $100 of collateral, and LevM lets you control a $500 position. The same price move now generates 5x the return on your capital.
+
+## Three things that make LevM different
+
+<CardGroup cols={1}>
+  <Card title="Pre-event close" icon="clock">
+    Every leveraged position automatically closes 30 minutes before the underlying event begins. This protects you from the chaos of in-event price moves and the binary settlement risk that has caused other leverage platforms to collapse.
+  </Card>
+  <Card title="Transparent on-chain settlement" icon="shield-check">
+    Deposits, withdrawals, and the platform's solvency are verifiable on Polygon. You don't have to trust the team — you can check the balances yourself.
+  </Card>
+  <Card title="Built for prediction markets specifically" icon="bullseye">
+    LevM uses a risk engine designed for the unique characteristics of event contracts. The platform refuses to offer leverage on markets where the math doesn't work, rather than offering it dangerously.
+  </Card>
+</CardGroup>
+
+## What you can trade
+
+LevM offers leverage on prediction market outcomes that pass our quality checks. Sports markets, political events, and economic outcomes are common categories. The platform displays which markets are eligible for leverage and at what maximum leverage tier.
+
+## What you cannot trade (yet)
+
+LevM does not currently offer:
+
+- Options or structured products (coming in a later release)
+- Markets without sufficient liquidity
+- Markets priced near the extremes (below 5 cents or above 95 cents)

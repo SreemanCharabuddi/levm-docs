@@ -1,0 +1,46 @@
+---
+title: "How Leverage Works"
+description: "Mechanics, fees, and what happens when markets move."
+---
+
+Leverage amplifies both your gains and your losses. Understanding it is essential before opening a position.
+
+## The basic idea
+
+When you open a leveraged position, you put up collateral and LevM supplies the rest of the position size. At 5x leverage with $100 collateral, your effective position is $500. If the price moves 10% in your favor, you make $50 — a 50% return on your $100 collateral. If it moves 10% against you, you lose $50.
+
+## Reading the trade panel
+
+| Field                  | What it means                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------ |
+| **Leverage**           | Your multiplier. Higher leverage means bigger gains and bigger risk.                       |
+| **Collateral**         | The USDC you commit. This is what you can lose.                                            |
+| **Position Size**      | Your collateral multiplied by leverage. The total exposure.                                |
+| **Entry Price**        | The price at which your position is marked. Includes a small spread.                       |
+| **Liquidation Price**  | The price at which your position auto-closes to protect you from further losses.           |
+| **Estimated Fees**     | The total fees you'll pay over typical holding periods.                                    |
+
+## What happens if the market moves against you
+
+LevM continuously monitors the price of every open position against the current market. If the unrealized loss approaches your collateral, LevM closes the position automatically at the liquidation price. You receive whatever collateral remains after the loss and a small liquidation fee.
+
+<Note>
+  This protects you from losing more than your collateral. You can never owe LevM money.
+</Note>
+
+## Take profit and stop loss
+
+You can set automatic close triggers at prices of your choice:
+
+- **Take Profit:** Close when the market reaches a favorable price you specify
+- **Stop Loss:** Close when the market reaches an unfavorable price you specify
+
+These help you manage positions without watching them constantly.
+
+## The pre-event close
+
+Every leveraged position automatically closes 30 minutes before the underlying event begins. The close price is a time-weighted average of the prior 5 minutes.
+
+<Warning>
+  This is built in. You cannot opt out. The reason: prediction markets resolve to 0 or 100 cents instantly when an event happens, and holding leveraged positions through that moment creates catastrophic risk. By closing before the event, LevM ensures you receive a fair, market-driven price for your position.
+</Warning>

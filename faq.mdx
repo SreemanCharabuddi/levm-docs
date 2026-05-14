@@ -1,0 +1,83 @@
+---
+title: "Frequently Asked Questions"
+description: "Common questions about trading, deposits, and payouts."
+---
+
+## Trading
+
+<AccordionGroup>
+  <Accordion title="What's the maximum leverage?">
+    5x on markets that pass our quality checks. Lower tiers (2x, 3x) are available on markets with less liquidity.
+  </Accordion>
+  <Accordion title="Can I short a market?">
+    Yes. Open a long NO position to effectively short the YES outcome.
+  </Accordion>
+  <Accordion title="Can I close my position before the event ends?">
+    Yes, anytime. Manual close is available 24/7 until the pre-event close window begins.
+  </Accordion>
+  <Accordion title="What is the pre-event close?">
+    LevM automatically closes all leveraged positions 30 minutes before the underlying event begins. This is built into the platform and cannot be disabled.
+  </Accordion>
+  <Accordion title="Why doesn't LevM hold positions through resolution?">
+    Prediction markets resolve to 0 or 100 cents instantly. Holding leveraged positions through that moment creates risks that no leverage platform has been able to manage safely. LevM avoids this entirely by closing pre-event.
+  </Accordion>
+</AccordionGroup>
+
+## Deposits and withdrawals
+
+<AccordionGroup>
+  <Accordion title="What can I deposit?">
+    USDC on the Polygon network.
+  </Accordion>
+  <Accordion title="How long do deposits take?">
+    Typically under 60 seconds after the on-chain transaction confirms.
+  </Accordion>
+  <Accordion title="How long do withdrawals take?">
+    Typically under 60 seconds. Withdrawals are processed automatically when requested.
+  </Accordion>
+  <Accordion title="Are there minimum deposits or withdrawals?">
+    No minimums beyond standard network gas requirements.
+  </Accordion>
+</AccordionGroup>
+
+## Liquidation
+
+<AccordionGroup>
+  <Accordion title="What is liquidation?">
+    If your position's unrealized loss approaches your collateral, LevM closes the position automatically. This prevents you from losing more than you put in.
+  </Accordion>
+  <Accordion title="Can I owe more than my collateral?">
+    No. Your maximum loss is your collateral plus the liquidation penalty (5% of remaining collateral).
+  </Accordion>
+  <Accordion title="How is the liquidation price calculated?">
+    Based on your leverage, entry price, and maintenance margin. The exact price is shown when you open your position.
+  </Accordion>
+</AccordionGroup>
+
+## Platform safety
+
+<AccordionGroup>
+  <Accordion title="Is LevM safe?">
+    LevM is currently a custodial platform with on-chain deposits and withdrawals. The team is committed to migrating to non-custodial smart contracts after the initial launch period. Users should only deposit what they're comfortable with the platform holding.
+  </Accordion>
+  <Accordion title="How do I know LevM is solvent?">
+    Check the Solvency Dashboard. It shows the platform's custody balance, total user balances, and insurance fund in real time.
+  </Accordion>
+  <Accordion title="What happens if LevM has technical issues?">
+    The platform may pause new position opens during outages while keeping existing positions and closes available. Critical issues are communicated through Discord and X.
+  </Accordion>
+</AccordionGroup>
+
+## Other
+
+<AccordionGroup>
+  <Accordion title="Where is LevM based?">
+    LevM operates as a global protocol. Users should check their local regulations regarding prediction market and derivatives trading.
+  </Accordion>
+  <Accordion title="How can I contact the team?">
+    Discord is the fastest way. X (formerly Twitter) for announcements.
+  </Accordion>
+  <Accordion title="Is the code open source?">
+    Parts of the platform will be open-sourced after the smart contract migration. The team's commitment to transparency increases over time as the platform matures.
+  </Accordion>
+</AccordionGroup>

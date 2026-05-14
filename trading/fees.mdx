@@ -1,0 +1,52 @@
+---
+title: "Fees"
+description: "What LevM charges, where it charges, and a worked total-cost example."
+---
+
+LevM charges fees in a few places. All fees are disclosed before you open a position.
+
+## Open spread
+
+A small spread of 0.5 cents per contract, charged when you open. This is approximately 0.08% of position size on a market trading at 60 cents.
+
+## Close spread
+
+A matching 0.5 cents per contract, charged when you close. Same approximate cost as the open spread.
+
+## Open fee
+
+A 0.1% fee on the position size, charged at open. On a $1,000 position, that's $1.
+
+## Funding rate
+
+A small hourly fee accrued while your position is open. The rate ranges from 0.03% to 0.15% per hour depending on market conditions. Funding is charged from your available USDC balance.
+
+## Liquidation penalty
+
+If your position is liquidated, 5% of the remaining collateral is taken as a penalty. This goes to LevM's insurance fund, which protects the platform's solvency for all users.
+
+## No other fees
+
+LevM does not charge:
+
+- Deposit fees
+- Withdrawal fees (you pay network gas only)
+- Close fees beyond the close spread
+- Inactivity fees
+- Account fees
+
+## Total cost example
+
+Open a $1,000 position, hold for 8 hours, close manually:
+
+| Item                          | Cost      |
+| ----------------------------- | --------- |
+| Open spread                   | ~$0.80    |
+| Open fee                      | $1.00     |
+| Funding (8 hrs at 0.08%/hr)   | $6.40     |
+| Close spread                  | ~$0.80    |
+| **Total**                     | **~$9.00** |
+
+<Tip>
+  Less than 1% of position size for a typical trade.
+</Tip>
